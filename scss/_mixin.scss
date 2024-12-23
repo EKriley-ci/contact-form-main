@@ -1,0 +1,33 @@
+@mixin button-style($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  border:none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+  
+  &:active {
+    transform: scale(0.95);
+  }
+}
+
+@mixin input-style($color, $background-color) {
+  margin-top: 5px;
+
+    width: 100%;
+  color: $color;
+  background-color: tranqsparent;
+  border: 1px solid $color;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+  &:focus {
+    background-color: none;
+    color: $background-color;
+  }
+}

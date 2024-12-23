@@ -1,0 +1,22 @@
+// faire les reset avec le selecteur universel
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "karla";
+
+    .erreur {
+        color: red;
+        font-size: 0.8em;
+        margin-top: 5px;
+        font-weight: 400;
+        display: none;
+    }
+}
+
+// message d'erreur
+
+.redBorder {
+    border: 1px solid red;
+}
+

@@ -1,0 +1,33 @@
+.popup-message {
+    position: absolute;
+    background-color: $grey-darker;
+    color: $white;
+    padding: 10px;
+    border-radius: .5em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    top: 0px;
+    width: 80%;
+    max-width: 400px;
+    gap: 10px;
+    display: grid;
+    animation: fadeIn 0.5s ease-in-out;
+    display: none;
+    h4{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+    }
+
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

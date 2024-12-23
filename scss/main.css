@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "karla";
+}
+* .erreur {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 5px;
+  font-weight: 400;
+  display: none;
+}
+
+.redBorder {
+  border: 1px solid red;
+}
+
+body {
+  font-size: 16px;
+  font-family: "karla", sans-serif;
+  color: hsl(187, 24%, 22%);
+  background-color: hsl(148, 38%, 91%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+body main {
+  background-color: hsl(0, 0%, 100%);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 400px;
+}
+body main form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main form .queryType {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+body main form .queryType .fisrtOption, body main form .queryType .secondOption {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 20px 1fr;
+  margin-top: 5px;
+  width: 100%;
+  color: hsl(187, 24%, 22%);
+  background-color: tranqsparent;
+  border: 1px solid hsl(187, 24%, 22%);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+}
+body main form .queryType .fisrtOption:focus, body main form .queryType .secondOption:focus {
+  background-color: none;
+  color: hsl(169, 82%, 27%);
+}
+body main form textarea {
+  margin-top: 5px;
+  width: 100%;
+  color: hsl(187, 24%, 22%);
+  background-color: tranqsparent;
+  border: 1px solid hsl(187, 24%, 22%);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+  width: 100%;
+  height: 100px;
+}
+body main form textarea:focus {
+  background-color: none;
+  color: hsl(169, 82%, 27%);
+}
+body main form input {
+  margin-top: 5px;
+  width: 100%;
+  color: hsl(187, 24%, 22%);
+  background-color: tranqsparent;
+  border: 1px solid hsl(187, 24%, 22%);
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  transition: background-color 0.3s, color 0.3s;
+  outline: none;
+}
+body main form input:focus {
+  background-color: none;
+  color: hsl(169, 82%, 27%);
+}
+body main form .acceptBeenContacted {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+}
+body main form .acceptBeenContacted input {
+  width: auto;
+}
+body main form .acceptBeenContacted .erreur {
+  grid-column: 1/-1;
+}
+body main form button {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(169, 82%, 27%);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%;
+}
+body main form button:active {
+  transform: scale(0.95);
+}
+
+@media screen and (min-width: 1024px) {
+  body main {
+    max-width: 600px;
+  }
+  body main form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body main form .email, body main form .queryType, body main form .secondOption, body main form .message, body main form .acceptBeenContacted, body main form .submit {
+    grid-column: 1/-1;
+  }
+  body main form .queryType {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  body main form .queryType .fisrtOption {
+    grid-column: 1;
+  }
+  body main form .queryType .secondOption {
+    grid-column: 2;
+  }
+}
+.popup-message {
+  position: absolute;
+  background-color: hsl(187, 24%, 22%);
+  color: hsl(0, 0%, 100%);
+  padding: 10px;
+  border-radius: 0.5em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  top: 0px;
+  width: 80%;
+  max-width: 400px;
+  gap: 10px;
+  display: grid;
+  animation: fadeIn 0.5s ease-in-out;
+  display: none;
+}
+.popup-message h4 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=main.css.map */

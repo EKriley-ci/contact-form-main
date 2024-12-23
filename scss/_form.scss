@@ -1,0 +1,90 @@
+body {
+    font-size: $body-text;
+    font-family: 'karla', sans-serif;
+    color: $grey-darker;
+    background-color: $green-lighter;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    main {
+        background-color: $white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 400px;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .queryType {
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                .fisrtOption, .secondOption {
+                    display:grid;
+                    gap: 10px;
+                    grid-template-columns: 20px 1fr;
+                    @include input-style($grey-darker, $green-medium);
+                }
+             }
+             textarea {
+                @include input-style($grey-darker, $green-medium);
+                width: 100%;
+                height: 100px;
+             }
+           
+            input {
+                @include input-style($grey-darker, $green-medium);
+            }
+            .acceptBeenContacted {
+                display: grid;
+                gap: 10px;
+                grid-template-columns: 20px 1fr;
+                align-items: center;
+                input {
+                    width: auto;
+                }
+                .erreur {
+                    grid-column: 1/-1
+                }
+            }
+            button {
+                @include button-style($white, $green-medium);
+            }
+        }
+    }
+}
+
+// faire les media queries 
+
+// pour les ordinateurs
+
+@media screen and (min-width: 1024px) {
+    body {
+        main {
+            max-width: 600px;
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                .email, .queryType, .secondOption, .message, .acceptBeenContacted, .submit{
+                    grid-column: 1/-1;
+                }
+                .queryType {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    .fisrtOption {
+                        grid-column: 1;
+                    }
+                    .secondOption {
+                        grid-column: 2;
+                    }
+                }
+            }
+        }
+    }
+}

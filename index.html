@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend Mentor Challenge">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Frontend Mentor Challenge">
+    <meta name="author" content="Esmel kevin rilay">
+    <title>contact form || frontend mentor challenge</title>
+    <link rel="shortcut icon" href="assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="scss/main.css">
+</head>
+<body>
+
+    <!-- faire le message qui apparait apres la soumission du formulaire -->
+
+    <div class="popup-message">
+        <h4><img src="assets/images/icon-success-check.svg" alt="succes check icon ">Message Sent!</h4>
+        Thanks for completing the form. We'll be in touch soon!
+    </div>
+    <main>
+        <h1>contact us</h1>
+        <form>
+            <div class="firstName">
+                <label for="firstname">First Name <sup>*</sup></label>
+                <input type="text" id="firstname" name="firstname">
+
+
+                <span class="erreur">This field is required</span>
+            </div>
+
+            <div class="lastName">
+                <label for="lastname">Last Name <sup>*</sup></label>
+                <input type="text" id="lastname" name="lastname">
+                <span class="erreur">This field is required</span>
+            </div>
+
+            <div class="email">
+                <label for="email">Email Address <sup>*</sup></label>
+                <input type="email" id="email" name="email">
+                <span class="erreur">This field is required</span>
+            </div>
+
+            <div class="queryType">
+                <label for="option">Query Ttype <sup>*</sup></label>
+                    <div class="fisrtOption">
+                    <input type="radio" id="option" name="option" value="query">
+                    <label for="option">General Enquiry</label>
+                    </div>
+
+                    <div class="secondOption">
+                        <input type="radio" id="option" name="option" value="query">
+                    <label for="option">Support Request</label>
+                    </div>
+                    <span class="erreur">Please select a query type
+                    </span>
+            </div>
+
+            <div class="message">
+                <label for="message">Message <sup>*</sup></label>
+                <textarea id="message" name="message"></textarea>
+                <span class="erreur">This field is required</span>
+            </div>
+
+            <div class="acceptBeenContacted">
+                <input type="checkbox" id="condition" name="condition">
+                <label for="condition">I consent to being contacted by the team</label>
+                <span class="erreur">To submit this form, please consent to being contacted</span>
+            </div>
+
+            <div class="submit">
+                <button type="submit" id="submitBtn">submit</button>
+        </form>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
